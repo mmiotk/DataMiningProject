@@ -5,3 +5,10 @@
 *-Ex.R
 
 authorize.R
+
+#Tex documents
+*.aux
+*.out
+*.log
+*.toc
+*.synctex.gz

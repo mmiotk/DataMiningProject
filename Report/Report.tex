@@ -1,4 +1,4 @@
-\documentclass[12pt,a4paper]{report}
+\documentclass[12pt,a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
 \usepackage{amsfonts}
@@ -13,18 +13,17 @@
 
 \floatname{algorithm}{Algorytm}
 \newcommand{\algorithmname}{Algorytm}
-
+\renewcommand\thesection{\arabic{section}}
 \author{Mateusz Miotk 195025}
 \title{Zgłębianie danych - Raport z projektu}
 
-\newtheorem{Zad}{Zadanie}
-\newtheorem{Rozw}{Rozwiązanie}
 
 \begin{document}
 \maketitle
 \newpage
 \tableofcontents
 \newpage
+
 \section[Treść projektu] {Treść projektu}
 Przeprowadzić analizę opinii (sentiment mining) użytkowników Twittera na temat 
 budzący różne emocje: polityka, politycy (dla kilku – zrobić sondaż) lub bieżące 
@@ -256,8 +255,8 @@ Powyższe wykresy ukazują częstości wartości opinion, który został przydzi
 
 \section[Objaśnienie napisanego programu w języku R] {Objaśnienie napisanego programu w języku R}
 \subsection[Ogólne działanie] {Ogólne działanie}
-W pełni działający program znajduje się w repozytorium GitHub'a pod adresem: \\
-Program został tak skonstruowany, że wymaga tylko uruchomienia skryptu znajdującego się w pliku \textbf{main.R}. Poza tym jeśli użytkownik chce zmienić dane dla którego chce obliczyć sentiment analysis wystarczy tylko zmienić linijkę \textbf{words} w pliku \textbf{main.R}. Resztę czyli pobranie i zapisanie danych skrypt robi automatycznie.
+W pełni działający program znajduje się w repozytorium GitHub'a pod adresem: \url{https://github.com/miotek32/DataMiningProject} \\
+Program został tak skonstruowany, że wymaga tylko uruchomienia skryptu znajdującego się w pliku \textbf{main.R}. Poza tym jeśli użytkownik chce zmienić dane dla którego chce obliczyć sentiment analysis wystarczy tylko zmienić linijkę \textbf{words} w pliku \textbf{main.R}. Resztę czyli pobranie i zapisanie danych skrypt robi automatycznie. Dane wraz z histogranami zapisane są w folderze \textbf{Data}. Pliki z danymi są zapisane w formacie \textbf{.csv} . Każdy z nich zawiera w pierwszej kolumnie wartość opinii a następnie samą opinie, ale w swej pierwotnej postaci.
 \subsection[Plik CreateData.R]{Plik CreateData.R}
 Plik \textbf{CreateData.R} zawiera funkcję createData, która za swoje argumenty przyjmuje hasło, które ma poszukiwać na twitterze oraz liczbę tweetów do pobrania. Jego działanie polega na pobraniu tweetów z serwisu oraz zapisanie ich pod nazwą: \textbf{hasło.csv}.
 
@@ -270,10 +269,18 @@ Główny plik, którego uruchomienie skryptu spowoduje automatyczne wygenerowani
 \section[Ograniczenia] {Ograniczenia}
 Pakiet \textbf{twitteR} w języku R ma pewne ograniczenie, które wynika z wykorzystania zewnętrznego API usługi twitter. Polega ona na tym, że niekoniecznie możemy uzyskać żądaną liczbę tweetów dla danego słowa. Bardzo często zdarza się że funkcja \textbf{searchTwitter$($słowo,n=1000$)$} może wyświetlić nam komunikat, że niestety żądaliśmy 1000 tweetów, ale jedynie udało się uzyskać mniejszą ilość. Jest to spowodowane ograniczeniami, które znajdują się w API serwisu twitter. Drugim ograniczeniem jest czas działania programu. Ponieważ język R jest jednowątkowy to wykonanie napisanego tutaj programu trwa około 2 minut. 
 
+\section[Podsumowanie] {Podsumowanie}
+Przedstawione tutaj rozwiązanie nie jest jedyne. Istnieje na przykład metoda, która potrafi oprócz sklasyfikowania opinii jako pozytywna czy negatywna, przydzielić która opinia wyrażona jest przez szcześcię, złość itd. Pakiet R posiada takie rozwiązanie, które zawarte jest w pakietach: \textbf{tm} oraz \textbf{sentiment}. Jednak pakiety te są w fazie testowej, nie są one wydane w wersjach produkcyjnych, ale możliwości ich są obiecujące. 
+
 \newpage
 
 \begin{thebibliography}{1}
-
+\bibitem{} \url{http://davetang.org/muse/2013/04/06/using-the-r_twitter-package/}  
+\bibitem{} Video kurs: P.Anderson \em{How to use R in Mining Twitter}
+\bibitem{} \url{http://www.cs.uic.edu/~liub/FBS/sentiment-analysis.html}
+\bibitem{} \url{http://www.regular-expressions.info/posixbrackets.html}
+\bibitem{} \url{http://www.r-project.org/}
+\bibitem{} \url{http://cran.r-project.org/web/packages/available_packages_by_name.html}
 \end{thebibliography}
 
 
