@@ -1,0 +1,16 @@
+\contentsline {section}{\numberline {0.1}Tre\IeC {\'s}\IeC {\'c} projektu}{2}{section.0.1}
+\contentsline {section}{\numberline {0.2}Kr\IeC {\'o}tki wst\IeC {\k e}p dotycz\IeC {\k a}cy projektu i jego zastosowania}{2}{section.0.2}
+\contentsline {section}{\numberline {0.3}Narz\IeC {\k e}dzia jakie zosta\IeC {\l }y u\IeC {\.z}yte}{2}{section.0.3}
+\contentsline {section}{\numberline {0.4}Schemat algorytmu wykonania sentiment analysis}{3}{section.0.4}
+\contentsline {section}{\numberline {0.5}Opis poszczeg\IeC {\'o}lnych metod algorytmu}{3}{section.0.5}
+\contentsline {subsection}{\numberline {0.5.1}Po\IeC {\l }\IeC {\k a}czenie pakietu R z twitterem}{3}{subsection.0.5.1}
+\contentsline {subsection}{\numberline {0.5.2}Pobieranie danych z twittera}{8}{subsection.0.5.2}
+\contentsline {subsection}{\numberline {0.5.3}Wyczyszczenie i uporz\IeC {\k a}dkowanie danych za pomoc\IeC {\k a} wyra\IeC {\.z}e\IeC {\'n} regularnych}{9}{subsection.0.5.3}
+\contentsline {subsection}{\numberline {0.5.4}Funkcja sentiment}{10}{subsection.0.5.4}
+\contentsline {section}{\numberline {0.6}U\IeC {\.z}ycie sentiment analysis do analizy danych}{11}{section.0.6}
+\contentsline {section}{\numberline {0.7}Obja\IeC {\'s}nienie napisanego programu w j\IeC {\k e}zyku R}{14}{section.0.7}
+\contentsline {subsection}{\numberline {0.7.1}Og\IeC {\'o}lne dzia\IeC {\l }anie}{14}{subsection.0.7.1}
+\contentsline {subsection}{\numberline {0.7.2}Plik CreateData.R}{15}{subsection.0.7.2}
+\contentsline {subsection}{\numberline {0.7.3}Plik LoadTweets.R}{15}{subsection.0.7.3}
+\contentsline {subsection}{\numberline {0.7.4}Plik main.R}{15}{subsection.0.7.4}
+\contentsline {section}{\numberline {0.8}Ograniczenia}{15}{section.0.8}
